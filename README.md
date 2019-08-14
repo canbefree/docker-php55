@@ -19,13 +19,13 @@ FROM registry.cn-shenzhen.aliyuncs.com/canbefree/docker-php55:1.0.1
 
   
 ``` 
-    git tag -a release-v1.0.3 -m "Update ...."
+    git tag -a release-v1.0.2 -m "Update ...."
     git push origin --tags
 ```
 
 ```bash
 # 删除本地
-git tag -d v1.0.0
+git tag -d release-v1.0.2
 #删除远程的
-git push origin :refs/tags/release-v1.0.3
+git push origin :refs/tags/release-v1.0.2
 ```

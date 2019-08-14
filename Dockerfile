@@ -20,7 +20,7 @@ RUN git clone https://github.com/xdebug/xdebug \
     && cd ..\
     && rm -rf xdebug
 
-RUN docker-php-ext-install mysql bcmath pdo_mysql zip mycrpt
+RUN docker-php-ext-install mysql bcmath pdo_mysql zip mcrypt
 
 RUN docker-php-ext-configure gd --with-freetype-dir \
     && docker-php-ext-install gd
