@@ -7,7 +7,7 @@
 
 - 1.0.1:初始版本
 
-- 1.0.2: 添加mycrypt
+- 1.0.3: 添加mycrypt
 
 ### 使用示例：
   
@@ -19,6 +19,13 @@ FROM registry.cn-shenzhen.aliyuncs.com/canbefree/docker-php55:1.0.1
 
   
 ``` 
-    git tag -a release-v1.0.2 -m "Update ...."
+    git tag -a release-v1.0.3 -m "Update ...."
     git push origin --tags
+```
+
+```bash
+# 删除本地
+git tag -d v1.0.0
+#删除远程的
+git push origin :refs/tags/release-v1.0.3
 ```
