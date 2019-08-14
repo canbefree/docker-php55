@@ -4,7 +4,7 @@ LABEL maintainer xieyutian "xieyutianhn@gmail.com"
 
 RUN apt-get update
 
-RUN apt-get install git libpng-dev libfreetype6-dev -y
+RUN apt-get install git libpng-dev libfreetype6-dev  libmcrypt-dev -y
 
 
 RUN curl -O https://getcomposer.org/composer.phar \
@@ -20,10 +20,11 @@ RUN git clone https://github.com/xdebug/xdebug \
     && cd ..\
     && rm -rf xdebug
 
-RUN docker-php-ext-install mysql bcmath pdo_mysql zip 
+RUN docker-php-ext-install mysql bcmath pdo_mysql zip mycrpt
 
 RUN docker-php-ext-configure gd --with-freetype-dir \
     && docker-php-ext-install gd
+
 
 # 以root运行并强制前端运行
 CMD php-fpm -RF
