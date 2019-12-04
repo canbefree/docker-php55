@@ -1,31 +1,34 @@
-# docker-php55
-阿里云自动构建 版本php55
+# DOCKER-PHP55
 
+## 版本详情
 
+| 版本号        | 详情         | 备注  |
+| ------------- |:-------------:| -----:|
+| 1.0.0     | php55 |  基础版本 |
+| 1.0.3     | php55 |  添加mycrypt |
 
-### Release:
+## 阿里云自动构建过程
 
-- 1.0.1:初始版本
+### 阿里云添加镜像
 
-- 1.0.3: 添加mycrypt
+- 添加镜像仓库，选择github自动海外构建
 
-### 使用示例：
-  
-```Dockerfile
-FROM registry.cn-shenzhen.aliyuncs.com/canbefree/docker-php55:1.0.1
-```
+### 添加标签
 
-# tag添加方式
-
-  
-``` 
-    git tag -a release-v1.0.2 -m "Update ...."
+```bash
+    git tag -a release-v1.0.0 -m "Update ...."
     git push origin --tags
 ```
 
+### 删除标签
+
 ```bash
 # 删除本地
-git tag -d release-v1.0.2
+git tag -d release-v1.0.0
 #删除远程的
-git push origin :refs/tags/release-v1.0.2
+git push origin :refs/tags/release-v1.0.0
 ```
+
+### 镜像地址
+
+- registry.cn-shenzhen.aliyuncs.com/canbefree/docker-php55:1.0.1
